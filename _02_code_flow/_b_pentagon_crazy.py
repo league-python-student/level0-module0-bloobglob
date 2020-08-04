@@ -15,35 +15,39 @@ if __name__ == '__main__':
     window.bgcolor('black')
     window.setup(width=0.75, height=0.9, startx=0, starty=0)
     
-    colors = ('red','blue','green','yellow','orange')
+    colors = ('red', 'blue', 'white', 'green', 'purple', 'yellow')
     
     # Make a new turtle
-    
+    lucas = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    lucas.shape('turtle')
     # Set the turtle speed to max (0)
-    
+    lucas.speed(0)
     # Set the turtle width to 1
-    
+    turtle.width(1)
     # Create a variable to hold the number of sides in a pentagon
-    
+    sides = int
+    sides = 5
     # Create a variable to be the angle of 360 divided by the sides variable
-    
+    angle = float
+    angle = 360/sides
     # Use a for loop to repeat ALL the following lines of code 360 times. 
-        
+    for i in range(360):
         # If the loop variable (i) is equal to 100, set the turtle width to 2
-        
+        if i == 100:
+            lucas.width(2)
         # If the loop variable (i) is equal to 200, set the turtle width to 3
-        
+        elif i == 200:
+            lucas.width(3)
         # Use the getNextColor function to set the turtle pencolor,
         # *hint .pencolor(getNextColor(i)) 
-        
+        lucas.pencolor(getNextColor(i))
         # Move the turtle forward by the loop variable, *hint .forward(i)
-        
+        lucas.forward(i)
         # Turn the turtle to the right by the angle variable + 1
-
+        lucas.right(angle+1)
     # Hide your turtle so you can see the pattern.
-        
+    turtle.hideturtle()
     # Check the pattern against the picture in the recipe. If it matches, you are done!
     
     # Variations:
