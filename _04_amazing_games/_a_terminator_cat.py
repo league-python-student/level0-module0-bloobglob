@@ -12,9 +12,9 @@ class Eye():
         
     def draw(self):
         self.turtle.begin_fill()
-        self.myTurtle.goto(self.x, self.y)
-        self.myTurtle.circle(radius=self.radius, steps=20)
-        self.myTurtle.end_fill()
+        self.turtle.goto(self.x, self.y)
+        self.turtle.circle(radius=self.radius, steps=20)
+        self.turtle.end_fill()
 
 def setBackground(filename):
     
@@ -69,12 +69,12 @@ if __name__ == '__main__':
     #    The x,y position of the eye will be printed at the bottom of your processing window. 
     #    Variables for x and y have been created at the top of your sketch, 
     #    now you can set them equal to the values you just found. Watch for negative signs!
-    leftEye = Eye(laser, 4, 63, 30)
-    rightEye = Eye(laser, -49, 68)
+    leftEye = Eye(laser, 4, 48, 15)
+    rightEye = Eye(laser, -49, 53, 15)
     # 8. After you've found the x and y for the eyes create 2 eye variables and initialize them:
     #    leftEye = Eye(turtle=myTurtle, x=-34, y=11, radius=30)  
     #    rightEye = Eye(turtle=myTurtle, x=40, y=-5, radius=30)
-    
+    laser.hideturtle()
     # 9. Call the .draw() method on both eye variables
     leftEye.draw()
     rightEye.draw()
